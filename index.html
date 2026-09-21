@@ -1,0 +1,2183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>🌼 Feliz 21 de Setiembre 🌼</title>
+
+
+    <style>
+
+        /* =====================================================
+           CONFIGURACIÓN GENERAL
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            font-family:
+                "Trebuchet MS",
+                Arial,
+                sans-serif;
+
+            overflow-x: hidden;
+
+            color: #5b4300;
+
+            background:
+
+                radial-gradient(
+                    circle at 10% 10%,
+                    rgba(255,255,255,.95),
+                    transparent 25%
+                ),
+
+                radial-gradient(
+                    circle at 90% 20%,
+                    rgba(255,225,90,.45),
+                    transparent 28%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #fffef1,
+                    #fff6b8,
+                    #fffdf0
+                );
+        }
+
+
+
+        /* =====================================================
+           FONDO
+        ===================================================== */
+
+        .background {
+
+            position: fixed;
+
+            inset: 0;
+
+            overflow: hidden;
+
+            pointer-events: none;
+
+            z-index: 0;
+        }
+
+
+        .sun {
+
+            position: absolute;
+
+            width: 320px;
+            height: 320px;
+
+            right: -80px;
+            top: -100px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,215,50,.25);
+
+            filter: blur(5px);
+
+            animation:
+                sunAnimation 6s ease-in-out infinite alternate;
+        }
+
+
+        @keyframes sunAnimation {
+
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.15);
+            }
+
+        }
+
+
+
+        /* =====================================================
+           ESTRELLITAS
+        ===================================================== */
+
+        .sparkle {
+
+            position: fixed;
+
+            color: #e8b600;
+
+            font-size: 20px;
+
+            pointer-events: none;
+
+            animation:
+                sparkleAnimation 3s ease-in-out infinite;
+
+            z-index: 1;
+        }
+
+
+        @keyframes sparkleAnimation {
+
+            0%,100% {
+
+                opacity: .2;
+
+                transform:
+                    scale(.7)
+                    rotate(0deg);
+            }
+
+            50% {
+
+                opacity: 1;
+
+                transform:
+                    scale(1.2)
+                    rotate(180deg);
+            }
+
+        }
+
+
+
+        /* =====================================================
+           CONTENEDOR
+        ===================================================== */
+
+        .container {
+
+            position: relative;
+
+            z-index: 5;
+
+            min-height: 100vh;
+
+            width: 100%;
+
+            padding:
+                40px 15px 70px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+        }
+
+
+
+        /* =====================================================
+           FLOR SUPERIOR
+        ===================================================== */
+
+        .top-flower {
+
+            font-size: 65px;
+
+            animation:
+                flowerFloat 3s ease-in-out infinite;
+        }
+
+
+        @keyframes flowerFloat {
+
+            0%,100% {
+
+                transform:
+                    translateY(0)
+                    rotate(-5deg);
+            }
+
+            50% {
+
+                transform:
+                    translateY(-12px)
+                    rotate(5deg);
+            }
+
+        }
+
+
+
+        /* =====================================================
+           TITULO
+        ===================================================== */
+
+        h1 {
+
+            margin-top: 5px;
+
+            text-align: center;
+
+            font-size:
+                clamp(38px, 7vw, 75px);
+
+            line-height: 1.1;
+
+            color: #d99c00;
+
+            text-shadow:
+
+                3px 3px 0 white,
+
+                6px 6px 15px
+                rgba(150,100,0,.18);
+
+            animation:
+                titleAppear 1.5s ease;
+        }
+
+
+        @keyframes titleAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(-35px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+
+        }
+
+
+
+        .subtitle {
+
+            margin-top: 15px;
+
+            text-align: center;
+
+            font-size:
+                clamp(19px, 3vw, 29px);
+
+            color: #765900;
+        }
+
+
+
+        .date {
+
+            margin-top: 18px;
+
+            padding:
+                10px 24px;
+
+            border-radius: 40px;
+
+            background:
+                rgba(255,255,255,.75);
+
+            border:
+                2px solid #edc84d;
+
+            box-shadow:
+                0 8px 25px
+                rgba(160,120,0,.12);
+
+            font-weight: bold;
+
+            color: #806000;
+        }
+
+
+
+        /* =====================================================
+           TARJETA PRINCIPAL
+        ===================================================== */
+
+        .card {
+
+            position: relative;
+
+            width:
+                min(1050px, 96%);
+
+            margin-top: 35px;
+
+            padding:
+                38px 30px 45px;
+
+            border-radius: 40px;
+
+            background:
+                rgba(255,255,255,.72);
+
+            backdrop-filter:
+                blur(14px);
+
+            border:
+                2px solid
+                rgba(238,194,54,.55);
+
+            box-shadow:
+
+                0 25px 70px
+                rgba(120,90,0,.18);
+
+            text-align: center;
+
+            animation:
+                cardAppear 1.8s ease;
+        }
+
+
+        @keyframes cardAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(30px)
+                    scale(.94);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0)
+                    scale(1);
+            }
+
+        }
+
+
+
+        /* =====================================================
+           MENSAJE
+        ===================================================== */
+
+        .message {
+
+            max-width: 750px;
+
+            margin:
+                auto;
+
+            font-size:
+                clamp(18px, 2.5vw, 24px);
+
+            line-height: 1.65;
+
+            color: #654d00;
+        }
+
+
+        .message strong {
+
+            color: #dfa500;
+        }
+
+
+
+        /* =====================================================
+           JARDÍN DE GATITOS
+        ===================================================== */
+
+        .cats {
+
+            width: 100%;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: flex-end;
+
+            gap: 12px;
+
+            margin-top: 55px;
+
+            flex-wrap: wrap;
+
+            padding:
+                15px 10px 5px;
+        }
+
+
+
+        /* =====================================================
+           GATITO
+        ===================================================== */
+
+        .cute-cat {
+
+            position: relative;
+
+            width: 165px;
+
+            height: 220px;
+
+            animation:
+                catFloat 3.5s
+                ease-in-out
+                infinite;
+
+            transform-origin:
+                bottom center;
+        }
+
+
+        .cat1 {
+            animation-delay: 0s;
+        }
+
+        .cat2 {
+            animation-delay: .5s;
+        }
+
+        .cat3 {
+            animation-delay: 1s;
+        }
+
+        .cat4 {
+            animation-delay: 1.5s;
+        }
+
+        .cat5 {
+            animation-delay: 2s;
+        }
+
+
+        @keyframes catFloat {
+
+            0%,100% {
+
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+            }
+
+            50% {
+
+                transform:
+                    translateY(-12px)
+                    rotate(1deg);
+            }
+
+        }
+
+
+
+        /* =====================================================
+           COLA
+        ===================================================== */
+
+        .tail {
+
+            position: absolute;
+
+            width: 80px;
+            height: 90px;
+
+            right: -5px;
+
+            bottom: 23px;
+
+            border:
+                13px solid #efb27d;
+
+            border-left: none;
+
+            border-radius:
+                0 80px 80px 0;
+
+            transform:
+                rotate(-12deg);
+
+            z-index: 1;
+        }
+
+
+        .tail::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 25px;
+            height: 25px;
+
+            background:
+                #efb27d;
+
+            border-radius: 50%;
+
+            right: -12px;
+
+            bottom: -2px;
+        }
+
+
+
+        /* =====================================================
+           CUERPO
+        ===================================================== */
+
+        .body {
+
+            position: absolute;
+
+            width: 108px;
+            height: 105px;
+
+            left: 28px;
+            top: 105px;
+
+            background: #efb27d;
+
+            border:
+                3px solid #b87548;
+
+            border-radius:
+                55px 55px
+                38px 38px;
+
+            z-index: 2;
+        }
+
+
+        .belly {
+
+            position: absolute;
+
+            width: 68px;
+            height: 68px;
+
+            left: 17px;
+            top: 23px;
+
+            background:
+                #ffe1be;
+
+            border-radius: 50%;
+
+            opacity: .85;
+        }
+
+
+
+        /* =====================================================
+           CABEZA
+        ===================================================== */
+
+        .head {
+
+            position: absolute;
+
+            width: 125px;
+            height: 110px;
+
+            left: 20px;
+            top: 20px;
+
+            background: #efb27d;
+
+            border:
+                3px solid #b87548;
+
+            border-radius:
+                53% 53%
+                48% 48%;
+
+            z-index: 5;
+        }
+
+
+
+        /* =====================================================
+           OREJAS
+        ===================================================== */
+
+        .ear {
+
+            position: absolute;
+
+            width: 56px;
+            height: 56px;
+
+            top: -24px;
+
+            background:
+                #efb27d;
+
+            border:
+                3px solid #b87548;
+
+            transform:
+                rotate(45deg);
+
+            z-index: -1;
+        }
+
+
+        .left-ear {
+            left: 3px;
+        }
+
+
+        .right-ear {
+            right: 3px;
+        }
+
+
+        .inner-ear {
+
+            position: absolute;
+
+            width: 31px;
+            height: 31px;
+
+            left: 12px;
+            top: 12px;
+
+            border-radius: 50%;
+
+            background:
+                #f397a2;
+
+            opacity: .8;
+        }
+
+
+
+        /* =====================================================
+           OJOS
+        ===================================================== */
+
+        .eye {
+
+            position: absolute;
+
+            width: 21px;
+            height: 27px;
+
+            top: 40px;
+
+            background:
+                #30221b;
+
+            border-radius: 50%;
+
+            box-shadow:
+                inset 3px 3px 0
+                rgba(255,255,255,.08);
+        }
+
+
+        .left-eye {
+            left: 28px;
+        }
+
+
+        .right-eye {
+            right: 28px;
+        }
+
+
+        .eye span {
+
+            position: absolute;
+
+            width: 8px;
+            height: 8px;
+
+            left: 4px;
+            top: 4px;
+
+            background: white;
+
+            border-radius: 50%;
+        }
+
+
+
+        /* =====================================================
+           MEJILLAS
+        ===================================================== */
+
+        .cheek {
+
+            position: absolute;
+
+            color: #ee8795;
+
+            font-size: 14px;
+
+            opacity: .8;
+        }
+
+
+        .left-cheek {
+
+            left: 13px;
+
+            top: 67px;
+        }
+
+
+        .right-cheek {
+
+            right: 13px;
+
+            top: 67px;
+        }
+
+
+
+        /* =====================================================
+           NARIZ
+        ===================================================== */
+
+        .nose {
+
+            position: absolute;
+
+            width: 14px;
+            height: 10px;
+
+            left: 53px;
+            top: 68px;
+
+            background:
+                #df8290;
+
+            border-radius:
+                50% 50%
+                45% 45%;
+        }
+
+
+
+        /* =====================================================
+           BOCA
+        ===================================================== */
+
+        .mouth {
+
+            position: absolute;
+
+            width: 23px;
+            height: 14px;
+
+            left: 50px;
+            top: 72px;
+
+            border-bottom:
+                2px solid #704334;
+
+            border-radius: 50%;
+        }
+
+
+        .mouth span {
+
+            position: absolute;
+
+            width: 9px;
+            height: 5px;
+
+            left: 7px;
+            top: 8px;
+
+            background:
+                #df8290;
+
+            border-radius:
+                0 0 50% 50%;
+        }
+
+
+
+        /* =====================================================
+           BIGOTES
+        ===================================================== */
+
+        .whiskers {
+
+            position: absolute;
+
+            width: 45px;
+
+            top: 72px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 5px;
+        }
+
+
+        .left-whiskers {
+            left: -40px;
+        }
+
+
+        .right-whiskers {
+            right: -40px;
+        }
+
+
+        .whiskers i {
+
+            width: 42px;
+            height: 2px;
+
+            background:
+                #886149;
+
+            border-radius: 50%;
+
+            display: block;
+        }
+
+
+
+        /* =====================================================
+           BRAZOS
+        ===================================================== */
+
+        .arm {
+
+            position: absolute;
+
+            width: 27px;
+            height: 60px;
+
+            background:
+                #efb27d;
+
+            border:
+                3px solid #b87548;
+
+            border-radius: 30px;
+
+            top: 125px;
+
+            z-index: 4;
+        }
+
+
+        .left-arm {
+
+            left: 13px;
+
+            transform:
+                rotate(20deg);
+        }
+
+
+        .right-arm {
+
+            right: 13px;
+
+            transform:
+                rotate(-20deg);
+        }
+
+
+
+        /* =====================================================
+           FLOR DEL GATITO
+        ===================================================== */
+
+        .flower {
+
+            position: absolute;
+
+            font-size: 50px;
+
+            right: -5px;
+
+            top: 115px;
+
+            z-index: 6;
+
+            animation:
+                flowerWave 2s ease-in-out infinite;
+        }
+
+
+        @keyframes flowerWave {
+
+            0%,100% {
+
+                transform:
+                    rotate(-5deg);
+            }
+
+            50% {
+
+                transform:
+                    rotate(8deg)
+                    translateY(-3px);
+            }
+
+        }
+
+
+
+        /* =====================================================
+           VARIACIONES DE GATITOS
+        ===================================================== */
+
+        .cat2 .head,
+        .cat2 .body,
+        .cat2 .ear,
+        .cat2 .tail,
+        .cat2 .arm {
+
+            background: #f4c16e;
+        }
+
+
+        .cat3 .head,
+        .cat3 .body,
+        .cat3 .ear,
+        .cat3 .tail,
+        .cat3 .arm {
+
+            background: #d9d9d9;
+        }
+
+
+        .cat4 .head,
+        .cat4 .body,
+        .cat4 .ear,
+        .cat4 .tail,
+        .cat4 .arm {
+
+            background: #fff8e8;
+        }
+
+
+        .cat5 .head,
+        .cat5 .body,
+        .cat5 .ear,
+        .cat5 .tail,
+        .cat5 .arm {
+
+            background: #777777;
+        }
+
+
+        .cat2 .belly,
+        .cat3 .belly,
+        .cat4 .belly,
+        .cat5 .belly {
+
+            background: #fff0d0;
+        }
+
+
+
+        /* =====================================================
+           BOTONES
+        ===================================================== */
+
+        .buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 15px;
+
+            margin-top: 35px;
+        }
+
+
+        button {
+
+            border: none;
+
+            padding:
+                13px 23px;
+
+            border-radius: 30px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffd83d,
+                    #f4b900
+                );
+
+            color:
+                #624900;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 8px 20px
+                rgba(180,130,0,.2);
+
+            transition:
+                .3s ease;
+        }
+
+
+        button:hover {
+
+            transform:
+                translateY(-4px)
+                scale(1.03);
+
+            box-shadow:
+                0 12px 25px
+                rgba(180,130,0,.3);
+        }
+
+
+
+        /* =====================================================
+           FLORES QUE CAEN
+        ===================================================== */
+
+        .falling-flower {
+
+            position: fixed;
+
+            top: -50px;
+
+            font-size: 25px;
+
+            pointer-events: none;
+
+            z-index: 3;
+
+            animation:
+                falling linear forwards;
+        }
+
+
+        @keyframes falling {
+
+            from {
+
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+
+                opacity: 1;
+            }
+
+            to {
+
+                transform:
+                    translateY(110vh)
+                    rotate(360deg);
+
+                opacity: .2;
+            }
+
+        }
+
+
+
+        /* =====================================================
+           CORAZONES
+        ===================================================== */
+
+        .heart {
+
+            position: fixed;
+
+            pointer-events: none;
+
+            font-size: 25px;
+
+            z-index: 20;
+
+            animation:
+                heartAnimation 2s ease-out forwards;
+        }
+
+
+        @keyframes heartAnimation {
+
+            0% {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0)
+                    scale(.7);
+            }
+
+            100% {
+
+                opacity: 0;
+
+                transform:
+                    translateY(-180px)
+                    scale(1.5);
+            }
+
+        }
+
+
+
+        /* =====================================================
+           MENSAJE OCULTO
+        ===================================================== */
+
+        .hidden-message {
+
+            display: none;
+
+            margin-top: 25px;
+
+            padding:
+                20px;
+
+            border-radius: 25px;
+
+            background:
+                rgba(255,247,190,.8);
+
+            border:
+                2px dashed #e3b52f;
+
+            color: #6b5000;
+
+            font-size: 19px;
+
+            line-height: 1.6;
+
+            animation:
+                messageAppear .7s ease;
+        }
+
+
+        @keyframes messageAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    scale(.8);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    scale(1);
+            }
+
+        }
+
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 700px) {
+
+            .card {
+
+                padding:
+                    30px 18px 35px;
+
+                border-radius: 30px;
+            }
+
+
+            .cats {
+
+                gap: 0;
+            }
+
+
+            .cute-cat {
+
+                transform:
+                    scale(.85);
+            }
+
+
+            .message {
+
+                font-size: 18px;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .container {
+
+                padding-top: 25px;
+            }
+
+
+            .top-flower {
+
+                font-size: 50px;
+            }
+
+
+            .cute-cat {
+
+                transform:
+                    scale(.75);
+            }
+
+
+            .cats {
+
+                margin-top: 35px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+    <!-- =====================================================
+         FONDO
+    ===================================================== -->
+
+    <div class="background">
+
+        <div class="sun"></div>
+
+    </div>
+
+
+    <!-- ESTRELLITAS -->
+
+    <div class="sparkle" style="top:12%; left:8%;">✦</div>
+
+    <div class="sparkle" style="top:20%; left:90%; animation-delay:.5s;">✧</div>
+
+    <div class="sparkle" style="top:55%; left:5%; animation-delay:1s;">✦</div>
+
+    <div class="sparkle" style="top:70%; left:94%; animation-delay:1.5s;">✧</div>
+
+    <div class="sparkle" style="top:85%; left:15%; animation-delay:2s;">✦</div>
+
+
+
+    <!-- =====================================================
+         CONTENEDOR
+    ===================================================== -->
+
+    <div class="container">
+
+
+        <!-- FLOR -->
+
+        <div class="top-flower">
+
+            🌼
+
+        </div>
+
+
+
+        <!-- TITULO -->
+
+        <h1>
+
+            ¡Feliz 21 de Setiembre!
+
+        </h1>
+
+
+        <div class="subtitle">
+
+            Día de las Flores Amarillas 🌼💛🌼
+
+        </div>
+
+
+        <div class="date">
+
+            21 • 09 • 2026
+
+        </div>
+
+
+
+        <!-- =================================================
+             TARJETA
+        ================================================= -->
+
+        <div class="card">
+
+
+            <!-- MENSAJE -->
+
+            <div class="message">
+
+                🌼 <strong>Para Eliza</strong> 🌼
+
+                <br><br>
+
+                Hoy quería dejarte este pequeño detalle por el
+                <strong>Día de las Flores Amarillas</strong>. 💛
+
+                <br><br>
+
+                Eres una muy buena amiga y quiero que sepas que
+                <strong>siempre podrás contar conmigo</strong>,
+                tanto para los buenos momentos como cuando necesites
+                hablar con alguien.
+
+                <br><br>
+
+                Aunque por ahora solo hemos conversado de manera
+                virtual, espero que pronto podamos salir, conversar
+                en persona, ponernos al día y, obviamente...
+
+                <br>
+
+                <strong>chismear de todo un poco JAJAJA</strong> 😹🌼
+
+                <br><br>
+
+                Te lo prometo, esa salida queda pendiente. 🤝💛
+
+                <br><br>
+
+                Espero que estas florecitas te saquen una sonrisa
+                y que tengas un bonito Día de las Flores Amarillas. 🌼
+
+            </div>
+
+
+
+            <!-- =================================================
+                 GATITOS
+            ================================================= -->
+
+            <div class="cats">
+
+
+                <!-- GATITO 1 -->
+
+                <div class="cute-cat cat1">
+
+                    <div class="tail"></div>
+
+                    <div class="body">
+
+                        <div class="belly"></div>
+
+                    </div>
+
+
+                    <div class="arm left-arm"></div>
+
+                    <div class="arm right-arm"></div>
+
+
+                    <div class="head">
+
+
+                        <div class="ear left-ear">
+
+                            <div class="inner-ear"></div>
+
+                        </div>
+
+
+                        <div class="ear right-ear">
+
+                            <div class="inner-ear"></div>
+
+                        </div>
+
+
+
+                        <div class="eye left-eye">
+
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="eye right-eye">
+
+                            <span></span>
+
+                        </div>
+
+
+
+                        <div class="cheek left-cheek">
+
+                            ●●
+
+                        </div>
+
+
+                        <div class="cheek right-cheek">
+
+                            ●●
+
+                        </div>
+
+
+
+                        <div class="nose"></div>
+
+
+                        <div class="mouth">
+
+                            <span></span>
+
+                        </div>
+
+
+
+                        <div class="whiskers left-whiskers">
+
+                            <i></i>
+
+                            <i></i>
+
+                            <i></i>
+
+                        </div>
+
+
+                        <div class="whiskers right-whiskers">
+
+                            <i></i>
+
+                            <i></i>
+
+                            <i></i>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="flower">
+
+                        🌼
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- GATITO 2 -->
+
+                <div class="cute-cat cat2">
+
+                    <div class="tail"></div>
+
+                    <div class="body">
+
+                        <div class="belly"></div>
+
+                    </div>
+
+
+                    <div class="arm left-arm"></div>
+
+                    <div class="arm right-arm"></div>
+
+
+                    <div class="head">
+
+                        <div class="ear left-ear">
+
+                            <div class="inner-ear"></div>
+
+                        </div>
+
+
+                        <div class="ear right-ear">
+
+                            <div class="inner-ear"></div>
+
+                        </div>
+
+
+                        <div class="eye left-eye">
+
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="eye right-eye">
+
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="cheek left-cheek">
+
+                            ●●
+
+                        </div>
+
+
+                        <div class="cheek right-cheek">
+
+                            ●●
+
+                        </div>
+
+
+                        <div class="nose"></div>
+
+
+                        <div class="mouth">
+
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="whiskers left-whiskers">
+
+                            <i></i>
+
+                            <i></i>
+
+                            <i></i>
+
+                        </div>
+
+
+                        <div class="whiskers right-whiskers">
+
+                            <i></i>
+
+                            <i></i>
+
+                            <i></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="flower">
+
+                        🌻
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- GATITO 3 -->
+
+                <div class="cute-cat cat3">
+
+                    <div class="tail"></div>
+
+                    <div class="body">
+
+                        <div class="belly"></div>
+
+                    </div>
+
+
+                    <div class="arm left-arm"></div>
+
+                    <div class="arm right-arm"></div>
+
+
+                    <div class="head">
+
+                        <div class="ear left-ear">
+
+                            <div class="inner-ear"></div>
+
+                        </div>
+
+
+                        <div class="ear right-ear">
+
+                            <div class="inner-ear"></div>
+
+                        </div>
+
+
+                        <div class="eye left-eye">
+
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="eye right-eye">
+
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="cheek left-cheek">
+
+                            ●●
+
+                        </div>
+
+
+                        <div class="cheek right-cheek">
+
+                            ●●
+
+                        </div>
+
+
+                        <div class="nose"></div>
+
+
+                        <div class="mouth">
+
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="whiskers left-whiskers">
+
+                            <i></i>
+
+                            <i></i>
+
+                            <i></i>
+
+                        </div>
+
+
+                        <div class="whiskers right-whiskers">
+
+                            <i></i>
+
+                            <i></i>
+
+                            <i></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="flower">
+
+                        🌼
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- GATITO 4 -->
+
+                <div class="cute-cat cat4">
+
+                    <div class="tail"></div>
+
+                    <div class="body">
+
+                        <div class="belly"></div>
+
+                    </div>
+
+
+                    <div class="arm left-arm"></div>
+
+                    <div class="arm right-arm"></div>
+
+
+                    <div class="head">
+
+                        <div class="ear left-ear">
+
+                            <div class="inner-ear"></div>
+
+                        </div>
+
+
+                        <div class="ear right-ear">
+
+                            <div class="inner-ear"></div>
+
+                        </div>
+
+
+                        <div class="eye left-eye">
+
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="eye right-eye">
+
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="cheek left-cheek">
+
+                            ●●
+
+                        </div>
+
+
+                        <div class="cheek right-cheek">
+
+                            ●●
+
+                        </div>
+
+
+                        <div class="nose"></div>
+
+
+                        <div class="mouth">
+
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="whiskers left-whiskers">
+
+                            <i></i>
+
+                            <i></i>
+
+                            <i></i>
+
+                        </div>
+
+
+                        <div class="whiskers right-whiskers">
+
+                            <i></i>
+
+                            <i></i>
+
+                            <i></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="flower">
+
+                        🌻
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- GATITO 5 -->
+
+                <div class="cute-cat cat5">
+
+                    <div class="tail"></div>
+
+                    <div class="body">
+
+                        <div class="belly"></div>
+
+                    </div>
+
+
+                    <div class="arm left-arm"></div>
+
+                    <div class="arm right-arm"></div>
+
+
+                    <div class="head">
+
+                        <div class="ear left-ear">
+
+                            <div class="inner-ear"></div>
+
+                        </div>
+
+
+                        <div class="ear right-ear">
+
+                            <div class="inner-ear"></div>
+
+                        </div>
+
+
+                        <div class="eye left-eye">
+
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="eye right-eye">
+
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="cheek left-cheek">
+
+                            ●●
+
+                        </div>
+
+
+                        <div class="cheek right-cheek">
+
+                            ●●
+
+                        </div>
+
+
+                        <div class="nose"></div>
+
+
+                        <div class="mouth">
+
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="whiskers left-whiskers">
+
+                            <i></i>
+
+                            <i></i>
+
+                            <i></i>
+
+                        </div>
+
+
+                        <div class="whiskers right-whiskers">
+
+                            <i></i>
+
+                            <i></i>
+
+                            <i></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="flower">
+
+                        🌼
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 BOTONES
+            ================================================= -->
+
+            <div class="buttons">
+
+                <button onclick="moreFlowers()">
+
+                    🌼 Más flores
+
+                </button>
+
+
+                <button onclick="showMessage()">
+
+                    💌 Leer otra vez
+
+                </button>
+
+
+                <button onclick="moreHearts()">
+
+                    💛 Llenar de corazones
+
+                </button>
+
+            </div>
+
+
+
+            <!-- MENSAJE OCULTO -->
+
+            <div
+                id="hiddenMessage"
+                class="hidden-message"
+            >
+
+                🌼 Eliza, recuerda que siempre podrás contar conmigo. 💛
+
+                <br><br>
+
+                Y esa salida para conversar y chismear...
+
+                <strong>¡queda pendiente! JAJAJA 😹</strong>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ===================================================== -->
+
+    <script>
+
+
+        /* =====================================================
+           CREAR FLORES
+        ===================================================== */
+
+        function createFlower() {
+
+            const flower =
+                document.createElement("div");
+
+            flower.className =
+                "falling-flower";
+
+            flower.innerHTML =
+                Math.random() > .5
+                    ? "🌼"
+                    : "🌻";
+
+
+            flower.style.left =
+                Math.random() * 100 + "vw";
+
+
+            flower.style.fontSize =
+                (18 + Math.random() * 22) + "px";
+
+
+            flower.style.animationDuration =
+                (4 + Math.random() * 5) + "s";
+
+
+            document.body.appendChild(flower);
+
+
+            setTimeout(() => {
+
+                flower.remove();
+
+            }, 9000);
+
+        }
+
+
+
+        /* =====================================================
+           MÁS FLORES
+        ===================================================== */
+
+        function moreFlowers() {
+
+            for (
+                let i = 0;
+                i < 25;
+                i++
+            ) {
+
+                setTimeout(
+                    createFlower,
+                    i * 100
+                );
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           CORAZONES
+        ===================================================== */
+
+        function createHeart() {
+
+            const heart =
+                document.createElement("div");
+
+            heart.className =
+                "heart";
+
+            heart.innerHTML =
+                Math.random() > .5
+                    ? "💛"
+                    : "🌼";
+
+
+            heart.style.left =
+                Math.random() * 100 + "vw";
+
+
+            heart.style.top =
+                (70 + Math.random() * 25) + "vh";
+
+
+            document.body.appendChild(heart);
+
+
+            setTimeout(() => {
+
+                heart.remove();
+
+            }, 2200);
+
+        }
+
+
+
+        /* =====================================================
+           MÁS CORAZONES
+        ===================================================== */
+
+        function moreHearts() {
+
+            for (
+                let i = 0;
+                i < 30;
+                i++
+            ) {
+
+                setTimeout(
+                    createHeart,
+                    i * 80
+                );
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           MOSTRAR MENSAJE
+        ===================================================== */
+
+        function showMessage() {
+
+            const message =
+                document.getElementById(
+                    "hiddenMessage"
+                );
+
+
+            if (
+                message.style.display === "block"
+            ) {
+
+                message.style.display =
+                    "none";
+
+            } else {
+
+                message.style.display =
+                    "block";
+
+                message.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+
+            }
+
+        }
+
+
+
+        /* =====================================================
+           FLORES AUTOMÁTICAS
+        ===================================================== */
+
+        setInterval(
+            createFlower,
+            1800
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>
